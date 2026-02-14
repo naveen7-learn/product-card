@@ -1,8 +1,8 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import "./App.css";
 
 function App() {
-
   const products = [
     { name: "Wireless Mouse", price: 799, inStock: true },
     { name: "Mechanical Keyboard", price: 2499, inStock: false },
@@ -13,9 +13,9 @@ function App() {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Product Card Component</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div className="container">
+      <h1 className="title">🛒 Modern Product Cards</h1>
+      <div className="card-wrapper">
         {products.map((product, index) => (
           <ProductCard
             key={index}
@@ -30,3 +30,4 @@ function App() {
 }
 
 export default App;
+
